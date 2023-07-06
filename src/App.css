@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -35,4 +38,84 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  padding: 10px;
+}
+
+.tab {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.tab:hover {
+  border-bottom-color: #ccc;
+}
+
+.tab.active {
+  border-bottom-color: #000;
+  font-weight: bold;
+}
+
+.tab-content {
+  flex-grow: 1;
+  overflow: auto;
+  padding: 15px 0;
+}
+
+.item {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.secondary-text {
+  color: #555;
+}
+
+.load-more-btn {
+  background-color: #4a90e2; 
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #3a7cc1; 
+}
+
+.load-more-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.container {
+  margin-bottom: 10px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.comment-container {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.comment-item {
+  background-color: #f8f8f8;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.comment-content {
+  margin-top: 5px;
 }

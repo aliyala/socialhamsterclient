@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 const App = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const handleTabClick = (tabIndex) => {
+  const handleTabClick = tabIndex => {
     setActiveTab(tabIndex);
   };
 
@@ -17,33 +17,33 @@ const App = () => {
     <ApolloProvider client={client}>
       <div className="App">
         <div className="tabs">
-        <div
-          className={`tab ${activeTab === 0 ? 'active' : ''}`}
-          onClick={() => handleTabClick(0)}
-        >
-          Users
+          <div
+            className={`tab ${activeTab === 0 ? 'active' : ''}`}
+            onClick={() => handleTabClick(0)}
+          >
+            Users
+          </div>
+          <div
+            className={`tab ${activeTab === 1 ? 'active' : ''}`}
+            onClick={() => handleTabClick(1)}
+          >
+            Posts
+          </div>
+          <div
+            className={`tab ${activeTab === 2 ? 'active' : ''}`}
+            onClick={() => handleTabClick(2)}
+          >
+            Posts and comments
+          </div>
         </div>
-        <div
-          className={`tab ${activeTab === 1 ? 'active' : ''}`}
-          onClick={() => handleTabClick(1)}
-        >
-          Posts overview
+        <div className="tab-content">
+          {activeTab === 0 && <Users />}
+          {activeTab === 1 && <Posts />}
+          {activeTab === 2 && <PostsDetailed />}
         </div>
-        <div
-          className={`tab ${activeTab === 2 ? 'active' : ''}`}
-          onClick={() => handleTabClick(2)}
-        >
-          Posts and comments
-        </div>
-      </div>
-      <div className="tab-content">
-        {activeTab === 0 && <Users/>}
-        {activeTab === 1 && <Posts/>}
-        {activeTab === 2 && <PostsDetailed/>}
-      </div>
       </div>
     </ApolloProvider>
   );
-}
+};
 
 export default App;

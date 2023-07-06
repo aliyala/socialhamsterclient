@@ -1,5 +1,5 @@
-import { gql } from "@apollo/client";
-import USER_MAIN_INFO from "./userMainInfo";
+import { gql } from '@apollo/client';
+import USER_MAIN_INFO from './userMainInfo';
 
 const GET_POSTS = gql`
   ${USER_MAIN_INFO}
@@ -7,10 +7,9 @@ const GET_POSTS = gql`
     posts(page: $page, pageSize: $pageSize) {
       id
       title
-      author
-        {
-          ...UserMainInfo
-        }
+      author {
+        ...UserMainInfo
+      }
     }
   }
 `;
