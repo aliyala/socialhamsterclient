@@ -5,6 +5,7 @@ This is a React.js project created with create-react-app and Apollo Client.
 ## Project Description
 
 This project fetches data from a GraphQL server and implements pagination.
+The url http://35.228.209.118:3000/graphql can be used as a graphQL server for testing.
 
 ## Technologies Used
 
